@@ -16,16 +16,16 @@
 //}
 
 //counter code
-var element=document.getElementById("counter"); 
+var button=document.getElementById("counter"); 
 var counter=0;
 
-element.onclick=function(){
+button.onclick=function(){
     //make a request to counter endpoint
     
     //capture response and store it
     
     //render the variable in correct span
     counter=counter+1;
-    var span=document.getElementById("span");
-    span.innerHTML=counter.toString();
-}
+    var span = document.getElementById("span");
+    span.innerHTML = counter.toString();
+};
