@@ -21,7 +21,7 @@ var counter=0;
 
 button.onclick=function(){
     //make a request to counter endpoint
-    
+   
     //capture response and store it
     
     //render the variable in correct span
