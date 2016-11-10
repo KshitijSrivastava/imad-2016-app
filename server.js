@@ -113,7 +113,7 @@ app.post('/login',function(req,res){
                if(hashedPassword===dbString){
                    
                       //Set a session
-                      req.session.auth={userId:results.row[0].id};
+                 //     req.session.auth={userId:results.row[0].id};
                       //set a cookie with a session id
                       //internally on the server side,it maps the session id to an object
                       //{auth:{userId}}
@@ -126,14 +126,14 @@ app.post('/login',function(req,res){
        }
     });
 });
-
+/*
 app.get('/check-login',function(req,res){
     if(req.session && req.session.auth && req.session.auth.userId) {
         res.send("You are Logged In "+req.session.auth.userId.toString());
     }else{
         res.send("You are Not Logged In");
     }
-});
+}); */
 
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
