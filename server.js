@@ -127,7 +127,8 @@ app.get('/articles/:articleName',function(req,res)
     //articles[articleName]=article-one
    // var articleName=req.params.articleName; //extracting a parameter
     
- pool.query("SELECT * FROM article WHERE title="+req.params.articleName,function(err,result){
+//SELECT * FROM article WHERE title='article-one'    (thinking as minus operator)
+ pool.query("SELECT * FROM article WHERE title= '"+req.params.articleName+"'",function(err,result){
      if(err)
      {
          res.status(500).send(err.toString());
