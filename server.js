@@ -140,6 +140,19 @@ app.get('/logout',function(req,res){
     res.send('Logged Out');
 });
 
+app.get('/get-articles',function(req,res){
+    pool.query('SELECT "title" FROM "article" ',function(err,result){
+         if(err){
+           res.status(500).send(err.toString());
+       }else{
+           if(result.rows.length===0){
+               res.send(403).send("No Articles Available");
+           }else{
+                res.send(result.toString());
+               }
+       }
+});
+
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
    //make a select response
