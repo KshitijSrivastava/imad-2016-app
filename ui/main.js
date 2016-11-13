@@ -122,6 +122,7 @@ showArticles.onclick=function(){
                 {
                  list+='<li> <a href="/articles/' + responses[i].title+ '"</a></li>';
                 }
+                console.log(list);
                  var ul=document.getElementById("article-list");
                 ul.innerHTML=list;
             }
