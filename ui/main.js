@@ -121,7 +121,7 @@ showArticles.onclick=function(){
                 var list="";
                 for(var i=0;i<responses.length;i++)
                 {
-                 list+="<li>"+response[i]+"</li>";
+                 list+="<li>"+responses[i]+"</li>";
                 }
                  var ul=document.getElementById("article-list");
                 ul.innerHTML=list;
