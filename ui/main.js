@@ -118,7 +118,11 @@ showArticles.onclick=function(){
                 var responses=request.responseText;
                 responses=JSON.parse(responses);
                 var list=responses;
-               
+                var list="";
+                for(var i=0;i<responses.length;i++)
+                {
+                 list+="<li>"+response[i]+"</li>";
+                }
                  var ul=document.getElementById("article-list");
                 ul.innerHTML=list;
             }
