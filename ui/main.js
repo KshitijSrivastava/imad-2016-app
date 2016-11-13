@@ -115,7 +115,7 @@ showArticles.onclick=function(){
         if(request.readyState===XMLHttpRequest.DONE){
             //take some action
             if(request.status===200){
-                var responses=request.responseText[0];
+                var responses=request.responseText;
                 responses=JSON.parse(responses);
                 var list=responses;
                
