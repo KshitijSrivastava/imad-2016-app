@@ -116,8 +116,14 @@ showArticles.onclick=function(){
             //take some action
             if(request.status===200){
                 var responses=request.responseText;
-                var articles = document.getElementById("articles");
-                articles.innerHTML = responses.toString();
+                responses=JSON.parse(responses);
+                var list="";
+                for(var i=0;i<responses.length;i++)
+                {
+                 list+="<li>"+responses[i]+"</li>";
+                }
+                 var ul=document.getElementById("article-list");
+                ul.innerHTML=list;
             }
         }
         // not done yet
