@@ -104,6 +104,28 @@ var register = document.getElementById('register_btn');
     
     };
 
+//Showing the List of Articles
+var showArticles=document.getElementById("articles_btn"); 
+showArticles.onclick=function(){
+    //create a request object
+    var request= new XMLHttpRequest();
+    
+    //capture response and store it
+    request.onreadystatechange=function(){
+        if(request.readyState===XMLHttpRequest.DONE){
+            //take some action
+            if(request.status===200){
+                var responses=request.responseText;
+                var articles = document.getElementById("articles");
+                articles.innerHTML = responses.toString();
+            }
+        }
+        // not done yet
+    };
+    //Make a request
+    request.open("GET","http://kshitijsrivastava.imad.hasura-app.io/get-articles",true);
+    request.send(null);
+};
 
 /*
 var submit=document.getElementById("submit_btn");
