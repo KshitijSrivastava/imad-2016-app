@@ -117,11 +117,10 @@ showArticles.onclick=function(){
             if(request.status===200){
                 var responses=request.responseText;
                 responses=JSON.parse(responses);
-                var list=responses;
                 var list="";
                 for(var i=0;i<responses.length;i++)
                 {
-                 list+="<li>"+responses[i].title+"</li>";
+                 list+='<li> <a href="/articles/"' + responses[i].title+ '</a></li>';
                 }
                  var ul=document.getElementById("article-list");
                 ul.innerHTML=list;
