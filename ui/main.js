@@ -120,7 +120,7 @@ showArticles.onclick=function(){
                 var list="";
                 for(var i=0;i<responses.length;i++)
                 {
-                 list+='<li> <a href="/articles/"' + responses[i].title+ '</a></li>';
+                 list+='<li> <a href="/articles/' + responses[i].title+ '"</a></li>';
                 }
                  var ul=document.getElementById("article-list");
                 ul.innerHTML=list;
