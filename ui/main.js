@@ -117,11 +117,8 @@ showArticles.onclick=function(){
             if(request.status===200){
                 var responses=request.responseText;
                 responses=JSON.parse(responses);
-                var list="";
-                for(var i=0;i<responses.length;i++)
-                {
-                 list+="<li>"+responses[i]+"</li>";
-                }
+                var list=responses;
+               
                  var ul=document.getElementById("article-list");
                 ul.innerHTML=list;
             }
