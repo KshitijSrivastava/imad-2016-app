@@ -54,7 +54,7 @@ function createTemplate(data)
             </div>
             <hr/>
             <div>
-            <input type="text" id="comments" placeholder="Your Comments" />
+            <input type="text" id="comments" placeholder="Your Comments" size="100" />
             </div>
         </div>
     </body>
