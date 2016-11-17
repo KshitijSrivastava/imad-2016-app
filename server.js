@@ -60,6 +60,12 @@ function createTemplate(data)
             <button id="comment_btn" type="button">Click to Enter Comments</button>
             </div>
         </div>
+        <script>
+        var comment_btn=document.getElementById("comment_btn");
+        comment_btn.onclick()=function(){
+            
+        };
+        </script>
     </body>
 </html>
 `  ;
