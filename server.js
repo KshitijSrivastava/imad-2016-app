@@ -52,6 +52,10 @@ function createTemplate(data)
             <div>
                 ${content}
             </div>
+            <hr/>
+            <div>
+            <input type="text" id="comments" placeholder="Your Comments" />
+            </div>
         </div>
     </body>
 </html>
