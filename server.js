@@ -60,9 +60,7 @@ function createTemplate(data)
             <button id="comment_btn" type="button">Click to Enter Comments</button>
             </div>
         </div>
-        <script>
-        
-        </script>
+        <script type="text/javascript" src="/ui/article.js"></script>
     </body>
 </html>
 `  ;
