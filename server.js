@@ -108,6 +108,24 @@ app.post('/create-user',function(req,res){
     });
 });
 
+app.post('/comment',function(req,res){
+   
+    var article_id=req.body.article_id;
+    var user_id=req.body.user_id;
+    var comment=req.body.comment;
+    //var timestamp=req.body.timestamp;
+    
+    pool.query('INSERT INTO "comment" (article_id,user_id,comment) VALUES($1,$2)',[username,user_id,comment],function(err,result){
+         if(err){
+           res.status(500).send(err.toString());
+       }else{
+           res.send("You have commented on the article");
+       }
+    });
+});
+
+
+
 app.post('/login',function(req,res){
     var username=req.body.username;
     var password=req.body.password;
